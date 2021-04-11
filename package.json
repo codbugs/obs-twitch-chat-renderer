@@ -6,7 +6,7 @@
     "esbuild": "^0.11.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "esbuild ./src/index.js --bundle --outfile=./bundle/obs-twitch-chat-renderer.js"
   },
   "keywords": [],
   "author": "",
