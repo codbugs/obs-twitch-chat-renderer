@@ -2,3 +2,6 @@ node_modules/
 bundle/
 
 package-lock.json
+
+# Ignore todo files
+*.todo
