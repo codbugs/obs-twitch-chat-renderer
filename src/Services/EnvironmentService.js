@@ -2,9 +2,9 @@ export default function EnvironmentService() {
     return {
         find() {
             return {
-                username: '', // set your Twitch Bot username
-                password: '', // set your Twitch key
-                channel: '' // set your Twitch channel name
+                username: TWITCH_USERNAME,
+                password: 'oauth:' + TWITCH_PASSWORD,
+                channel: TWITCH_CHANNEL
             };
         }
     }

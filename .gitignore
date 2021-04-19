@@ -3,5 +3,8 @@ bundle/
 
 package-lock.json
 
+# Ignore environment files
+*.env
+
 # Ignore todo files
 *.todo

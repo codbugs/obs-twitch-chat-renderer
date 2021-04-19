@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "esbuild": "^0.11.7",
     "faker": "^5.5.3"
   },
   "scripts": {
-    "dev": "esbuild ./src/index.js --bundle --watch --outfile=./bundle/obs-twitch-chat-renderer.js",
-    "bundle": "esbuild ./src/index.js --bundle --outfile=./bundle/obs-twitch-chat-renderer.js"
+    "dev": "set WATCH=true && node bundle.js",
+    "bundle": "node bundle.js"
   },
   "keywords": [],
   "author": "",
