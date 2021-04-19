@@ -1,0 +1,9 @@
+.background {
+    background-color: #FFE6C2;
+    height: 100vh;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}

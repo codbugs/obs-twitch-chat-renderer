@@ -3,8 +3,9 @@ require('dotenv').config();
 
 // bundle javascript files
 require('esbuild').build({
-    entryPoints: ['./src/index.js'],
-    outfile: './bundle/obs-twitch-chat-renderer.js',
+    entryPoints: ['./src/index.js', './src/index.css'],
+    // outfile: './bundle/obs-twitch-chat-renderer.js',
+    outdir: './bundle',
     bundle: true,
     define: {
         TWITCH_CHANNEL: `"${process.env.TWITCH_CHANNEL}"`,

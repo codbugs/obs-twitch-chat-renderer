@@ -1,0 +1,33 @@
+.chat {
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 95vw;
+}
+
+.chat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+.message-user {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+.message-text {
+    background-color: #A7E8BD;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-left: 25px;
+    padding: 10px 15px;
+}
