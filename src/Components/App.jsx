@@ -1,32 +1,34 @@
+// libraries imports
 import React from 'react';
 
+// components imports
 import Background from './Background.jsx';
 import Chat from './Chat.jsx';
 
-import faker from 'faker';
+// service imports
+import TwitchChatService from '../Services/TiwtchChatService.js';
+
 
 export default function App() {
 
     let [message, setMessage] = React.useState(null);
     let [items, setItems] = React.useState([]);
-    let intervalId = null;
+
+
+    const service = new TwitchChatService();
 
     React.useEffect(() => {
-        intervalId = setInterval(() => {
+        service.register(data => {
             const chat = { 
-                message: faker.lorem.sentence(),
+                message: data.message,
                 user: {
-                    color: faker.internet.color(),
-                    name: faker.name.firstName()
+                    color: data.user.color,
+                    name: data.user.name
                 }
             };
 
             setMessage(chat);
-        }, 1000);
-
-        setTimeout(() => {
-            clearInterval(intervalId);
-        }, 15000);
+        });
     }, []);
 
     React.useEffect(() => {
