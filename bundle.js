@@ -4,7 +4,6 @@ require('dotenv').config();
 // bundle javascript files
 require('esbuild').build({
     entryPoints: ['./src/index.js', './src/index.css'],
-    // outfile: './bundle/obs-twitch-chat-renderer.js',
     outdir: './bundle',
     bundle: true,
     define: {
@@ -14,3 +13,5 @@ require('esbuild').build({
     },
     watch: new Boolean(process.env.WATCH) == true ? true : false
 });
+
+require('fs').copyFileSync('./src/index.html', './bundle/index.html');
